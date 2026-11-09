@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="robots" content="noindex" />
+    <title>Click S.O.S — Contato de emergência</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="src/app.js"></script>
+  </head>
+  <body>
+    <main aria-live="polite">
+      <p class="marca">Click S.O.S</p>
+
+      <section data-tela="carregando">
+        <h1 tabindex="-1">Carregando…</h1>
+      </section>
+
+      <section data-tela="pedido" hidden>
+        <h1 tabindex="-1" id="saudacao"></h1>
+        <p id="texto-pedido"></p>
+        <p id="texto-explicacao" class="secundario"></p>
+        <div class="botoes">
+          <button id="aceitar" type="button" class="primario">Aceito</button>
+          <button id="recusar" type="button">Não aceito</button>
+        </div>
+      </section>
+
+      <section data-tela="aceito" hidden>
+        <h1 tabindex="-1">Obrigado!</h1>
+        <p>Você agora é contato de emergência. Pode fechar esta página.</p>
+      </section>
+
+      <section data-tela="recusado" hidden>
+        <h1 tabindex="-1">Tudo bem.</h1>
+        <p>Você não vai receber alertas. Pode fechar esta página.</p>
+      </section>
+
+      <section data-tela="invalido" hidden>
+        <h1 tabindex="-1">Link inválido ou expirado</h1>
+        <p>Peça para quem enviou o link mandar um novo.</p>
+      </section>
+
+      <section data-tela="erro" hidden>
+        <h1 tabindex="-1">Não foi possível conectar</h1>
+        <p>Verifique sua internet e tente de novo.</p>
+        <div class="botoes">
+          <button id="tentar-novamente" type="button" class="primario">Tentar novamente</button>
+        </div>
+      </section>
+
+      <noscript><p>Ative o JavaScript para responder ao pedido.</p></noscript>
+    </main>
+  </body>
+</html>

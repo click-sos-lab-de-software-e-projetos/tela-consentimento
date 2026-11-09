@@ -1,0 +1,10 @@
+{
+  "name": "tela-consentimento",
+  "private": true,
+  "type": "module",
+  "description": "Página pública em que o contato aceita ou recusa receber alertas do Click S.O.S.",
+  "scripts": {
+    "test": "node --test test/",
+    "start": "python3 -m http.server 5500"
+  }
+}
