@@ -28,7 +28,7 @@ CORS_ORIGIN_REGEX=^http://localhost:5500$
 CONSENTIMENTO_URL_BASE=http://localhost:5500/
 ```
 
-O endereço do backend fica em `src/config.js` (`API_BASE_URL`, padrão `http://localhost:8000`).
+O endereço do backend fica em `src/config.js` (`API_BASE_URL`, padrão `http://localhost:8000`). Com `backend/scripts/run.sh local` (ou `dev`), o script sobe esta página na porta 5500 e gera `env.js` (ignorado pelo Git) com o endereço do backend do perfil.
 
 ## Deploy (Render, plano gratuito)
 
