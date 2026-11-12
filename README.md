@@ -28,15 +28,15 @@ CORS_ORIGIN_REGEX=^http://localhost:5500$
 CONSENTIMENTO_URL_BASE=http://localhost:5500/
 ```
 
-O endereço do backend fica em `src/config.js` (`API_BASE_URL`, padrão `http://localhost:8000`). Com `backend/scripts/run.sh local` (ou `dev`), o script sobe esta página na porta 5500 e gera `env.js` (ignorado pelo Git) com o endereço do backend do perfil.
+O endereço do backend fica em `src/config.js`: sem `env.js`, a página aberta em `localhost` usa `http://localhost:8000` e, publicada, o backend do Render (`API_PRODUCAO`). Com `backend/scripts/run.sh local` (ou `dev`), o script sobe esta página na porta 5500 e gera `env.js` (ignorado pelo Git) com o endereço do backend do perfil.
 
-## Deploy (Render, plano gratuito)
+## Deploy (GitHub Pages)
 
-1. Crie um **Static Site** apontando para este repositório. Build command vazio e publish directory `.`.
-2. Antes, troque `API_BASE_URL` em `src/config.js` pelo endereço do backend no Render.
+1. **Settings** → **Pages** → **Deploy from a branch** → `main`, pasta `/`. A página fica em `https://click-sos-lab-de-software-e-projetos.github.io/tela-consentimento/`.
+2. Publicada, ela chama `API_PRODUCAO` (`src/config.js`); troque se o backend do Render mudar de endereço.
 3. No backend, configure:
-   - `CONSENTIMENTO_URL_BASE=https://<site>.onrender.com/`
-   - `CORS_ORIGIN_REGEX=^https://<site>\.onrender\.com$` (junte com as outras origens usando `|`, se houver).
+   - `CONSENTIMENTO_URL_BASE=https://click-sos-lab-de-software-e-projetos.github.io/tela-consentimento/`
+   - `CORS_ORIGIN_REGEX` aceitando `https://click-sos-lab-de-software-e-projetos.github.io` (junte com as outras origens usando `|`, se houver).
 
 ## Estrutura
 
